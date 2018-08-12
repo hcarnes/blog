@@ -1,11 +1,10 @@
 <p>
-  <strong>Title:</strong>
-  <%= @article.title %>
+ <strong><%= @article.title %></strong><br>
+ <span>Posted on <%= @article.created_at.strftime("%B %e, %Y") %></span>
 </p>
  
 <p>
-  <strong>Text:</strong>
-  <%= @article.text %>
+  <%= @article.text %> 
 </p>
  
 <h2>Comments</h2>
