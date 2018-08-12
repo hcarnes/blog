@@ -15,10 +15,33 @@
  */
 
  body {
-   font-family: 'VT323', monospace;
-   background-color: lightblue;
+	 font-family: 'VT323', monospace;
+	 background-color: lightblue;
    padding: 50px;
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
  }
+
+.cat {
+	box-sizing: border-box;
+	overflow: hidden;
+	transform: translatey(0px);
+	animation: float 4s ease-in-out infinite;
+	width: 200px;
+}
+
+@keyframes float {
+	0% {
+		filter: drop-shadow(5px 15px 5px black);
+		transform: translatey(0px);
+	}
+	50% {
+		filter: drop-shadow(25px 30px 15px black);
+		transform: translatey(-10px);
+	}
+	100% {
+		filter: drop-shadow(5px 15px 5px black);
+		transform: translatey(0px);
+	}
+}
