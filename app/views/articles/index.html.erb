@@ -1,4 +1,10 @@
+<%= form_tag(articles_path, method: :get) do %>
+  <%= text_field_tag :term %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
 <h1>Listing articles</h1>
+<% if @articles.any? %>
   <% @articles.each do |article| %>
     <ul>
       <li><%= article.title %></li>
@@ -12,5 +18,8 @@
     </ul>
     <hr>
   <% end %>
+<% else %>
+  Sorry, no articles found.
+<% end %>
 
-  <%= link_to 'Back', root_path %>
+<%= link_to 'Back', root_path %>
